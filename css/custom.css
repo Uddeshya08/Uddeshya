@@ -36,6 +36,8 @@ h5 {
 }
 .background-grey{
 	background-color:#3a3a3a;
+	margin-bottom: 30px;
+	padding: 20px;
 }
 .background-white{
 	background-color:#ffff;
@@ -142,6 +144,7 @@ margin-bottom: 40px;
 **Features
 */
 
+
 .features{
 	text-align: center;
 }
@@ -173,7 +176,7 @@ margin-bottom: 40px;
 }
 .recent .item{
 	padding: 100px 0;
- margin-top: 30px;
+ margin-top: 25px;
 }
 .recent .show-more {
 	margin-top:40px;
@@ -208,4 +211,132 @@ margin-bottom: 40px;
 	margin: 0 20px;
 	margin-bottom: 20px;
 	
+}
+/* 
+**Profile
+*/
+
+.box{
+width: 400px;
+margin: 0 auto;
+position: relative;
+perspective: 1000px;
+}
+
+.box .box-img{
+transform: rotateY(0);
+transition: all 0.5s ease-in-out 0s;
+}
+
+
+.box:hover .box-img{
+	transform: rotateY(-90deg);
+
+}
+
+.box .box-img{
+	width: 100%;
+	height:auto;
+}
+
+.box-content{
+	width: 100%;
+	height: 100%;  
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 60px 20px;
+	border: 1px solid red;
+	box-sizing: border-box;
+	text-align: center;
+	color: red;
+	background: rgba(0,0,0,0.7);
+	transform: rotateY(90deg);
+	transition: all 0.5s ease-in-out 0s;
+}
+
+.box:hover .box-content{
+	transform: rotateY(0);
+
+}
+.box h3{
+	color:white;
+	font-family: 'Pacifico', cursive;
+}
+
+.box p{
+	color: white;
+}
+
+
+span {
+
+  	font: 600 3em/1 "Oswald", sans-serif;
+  	letter-spacing: 0;
+  	padding: .25em 0 .325em;
+	  display: block;
+	  margin: 0 auto;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+/* Clip Background Image */
+
+	  background: url(http://www.sccpre.cat/png/big/2/20392_black-line-png.png) repeat-y;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+
+/* Animate Background Image */
+
+	  -webkit-text-fill-color: transparent;
+	  -webkit-animation: aitf 2s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+	  -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;
+
+  }
+
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+
+/*  Text on hover */
+
+.image-hvr {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-hvr {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text-hvr {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
